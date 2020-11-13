@@ -1,4 +1,4 @@
-#include <AssignCookiesL455.h>
+#include "Solution.h"
 #include <algorithm>
 
 int Solution_AssginCookies::findContentChildren(std::vector<int>& children, std::vector<int>& cookies)
@@ -8,8 +8,7 @@ int Solution_AssginCookies::findContentChildren(std::vector<int>& children, std:
 
     int child = 0, cookie = 0;
     while (child < children.size() && cookie < cookies.size()) {
-        if (children[child] <= cookies[cookie])
-        {
+        if (children[child] <= cookies[cookie]) {
             ++child;
         }
         ++cookie;

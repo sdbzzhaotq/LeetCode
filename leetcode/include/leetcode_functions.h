@@ -3,6 +3,6 @@
 #ifndef _LEETCODE_FUNCTIONS_H
 #define _LEETCODE_FUNCTIONS_H
 #include"common.h"
-#include <AssignCookiesL455.h>
+#include "Solution.h"
 
 #endif
