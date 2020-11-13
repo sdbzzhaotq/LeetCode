@@ -42,14 +42,11 @@ clean :
 # gtest_main.a, depending on whether it defines its own main()
 # function.
 
-001_Two_Sum.o : ./leetcode/src/001_Two_Sum.c
-	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c ./leetcode/src/001_Two_Sum.c
-
-L2addTwoNumbers.o : ./leetcode/src/L2addTwoNumbers.c
-	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c ./leetcode/src/L2addTwoNumbers.c
+AssignCookiesL455.o : ./leetcode/src/AssignCookiesL455.cpp
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c ./leetcode/src/AssignCookiesL455.cpp
 
 leetcode_test.o : ./testcase/src/leetcode_test.cpp
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c ./testcase/src/leetcode_test.cpp
 
-main : leetcode_test.o 001_Two_Sum.o L2addTwoNumbers.o
+main : leetcode_test.o AssignCookiesL455.o
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -lpthread $^ -o $@
