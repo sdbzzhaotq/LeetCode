@@ -24,3 +24,12 @@ TEST(Solution_Candy,candy)
     ASSERT_EQ(5,candy.candy(ratings));
 }
 
+
+TEST(Solution_NonOverlappingInterval,eraseOverlapIntervals) 
+{
+    Solution_NonOverlappingInterval nonoverlappinginterval;
+    std::vector<std::vector<int>> intervals = {{1,2},{2,4},{1,3}};
+    ASSERT_EQ(1,nonoverlappinginterval.eraseOverlapIntervals(intervals));
+    intervals = {};
+    ASSERT_EQ(0,nonoverlappinginterval.eraseOverlapIntervals(intervals));
+}

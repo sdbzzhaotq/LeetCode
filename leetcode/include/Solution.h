@@ -14,4 +14,11 @@ public:
     int candy(std::vector<int>& ratings);
 };
 
+//Non-overlapping Intervals
+class Solution_NonOverlappingInterval {
+public:
+    int eraseOverlapIntervals(std::vector<std::vector<int>>& intervals);
+};
+
+
 #endif

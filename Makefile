@@ -42,6 +42,9 @@ clean :
 # gtest_main.a, depending on whether it defines its own main()
 # function.
 
+NonOverlappingIntervalsL435.o : ./leetcode/src/NonOverlappingIntervalsL435.cpp
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c ./leetcode/src/NonOverlappingIntervalsL435.cpp
+
 CandyL135.o : ./leetcode/src/CandyL135.cpp
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c ./leetcode/src/CandyL135.cpp
 
@@ -51,5 +54,5 @@ AssignCookiesL455.o : ./leetcode/src/AssignCookiesL455.cpp
 leetcode_test.o : ./testcase/src/leetcode_test.cpp
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c ./testcase/src/leetcode_test.cpp
 
-main : leetcode_test.o AssignCookiesL455.o CandyL135.o
+main : leetcode_test.o AssignCookiesL455.o CandyL135.o NonOverlappingIntervalsL435.o
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -lpthread $^ -o $@

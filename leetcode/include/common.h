@@ -4,3 +4,4 @@
 #include <stdlib.h>
 #include <iostream>
 #include <numeric>
+#include <algorithm>
