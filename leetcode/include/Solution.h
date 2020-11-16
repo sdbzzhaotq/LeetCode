@@ -20,5 +20,10 @@ public:
     int eraseOverlapIntervals(std::vector<std::vector<int>>& intervals);
 };
 
+// Can Place Flowser
+class Solution_CanPlaceFlowser {
+public:
+    bool canPlaceFlowsers(std::vector<int>& flowsered, int n);
+};
 
 #endif

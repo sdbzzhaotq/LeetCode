@@ -36,11 +36,11 @@ all : $(TESTS)
 clean :
 	rm -f $(TESTS) *.o
 
-
-
 # Builds a sample test.  A test should link with either gtest.a or
 # gtest_main.a, depending on whether it defines its own main()
 # function.
+CanPlaceFlowserL605.o : ./leetcode/src/CanPlaceFlowserL605.cpp
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c ./leetcode/src/CanPlaceFlowserL605.cpp
 
 NonOverlappingIntervalsL435.o : ./leetcode/src/NonOverlappingIntervalsL435.cpp
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c ./leetcode/src/NonOverlappingIntervalsL435.cpp
@@ -54,5 +54,5 @@ AssignCookiesL455.o : ./leetcode/src/AssignCookiesL455.cpp
 leetcode_test.o : ./testcase/src/leetcode_test.cpp
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c ./testcase/src/leetcode_test.cpp
 
-main : leetcode_test.o AssignCookiesL455.o CandyL135.o NonOverlappingIntervalsL435.o
+main : leetcode_test.o AssignCookiesL455.o CandyL135.o NonOverlappingIntervalsL435.o CanPlaceFlowserL605.o
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -lpthread $^ -o $@

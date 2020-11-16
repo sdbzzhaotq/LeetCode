@@ -33,3 +33,12 @@ TEST(Solution_NonOverlappingInterval,eraseOverlapIntervals)
     intervals = {};
     ASSERT_EQ(0,nonoverlappinginterval.eraseOverlapIntervals(intervals));
 }
+
+
+TEST(Solution_CanPlaceFlowser,canPlaceFlowsers) 
+{
+    Solution_CanPlaceFlowser canplaceflowser;
+    std::vector<int> flowsers = {1,0,0,0,1};
+    ASSERT_EQ(true,canplaceflowser.canPlaceFlowsers(flowsers,1));
+    ASSERT_EQ(false,canplaceflowser.canPlaceFlowsers(flowsers,2));
+}
