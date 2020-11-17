@@ -42,3 +42,23 @@ TEST(Solution_CanPlaceFlowser,canPlaceFlowsers)
     ASSERT_EQ(true,canplaceflowser.canPlaceFlowsers(flowsers,1));
     ASSERT_EQ(false,canplaceflowser.canPlaceFlowsers(flowsers,2));
 }
+
+TEST(Solution_TwoInputII,twoSum) 
+{
+    Solution_TwoInputII twoinputii;
+    std::vector<int> numbers = {2,7,11,15};
+    std::vector<int> result = {1,2};
+
+    ASSERT_EQ(result,twoinputii.twoSum(numbers,9));
+    
+}
+
+TEST(Solution_MergeSortedArray,merge) 
+{
+    Solution_MergeSortedArray mergesortedarray;
+    std::vector<int> nums1 = {1,2,3,0,0,0}; 
+    std::vector<int> nums2 = {2,5,6};
+    std::vector<int> result = {1,2,2,3,5,6};
+    mergesortedarray.merge(nums1,3,nums2,3);
+    ASSERT_EQ(result,nums1);
+}

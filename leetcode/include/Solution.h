@@ -26,4 +26,17 @@ public:
     bool canPlaceFlowsers(std::vector<int>& flowsered, int n);
 };
 
+//167 Two Sum II - Input array is sorted
+class Solution_TwoInputII {
+public:
+    std::vector<int> twoSum(std::vector<int>&numbers, int target);
+};
+
+//88. Merge Sorted Array
+class Solution_MergeSortedArray {
+public:
+    void merge(std::vector<int>& nums1, int m, std::vector<int>& nums2, int n);
+};
+
+
 #endif
