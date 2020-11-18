@@ -62,3 +62,15 @@ TEST(Solution_MergeSortedArray,merge)
     mergesortedarray.merge(nums1,3,nums2,3);
     ASSERT_EQ(result,nums1);
 }
+
+TEST(Solution_LinkedListCycleII,detectCycle) 
+{
+    ListNode node1{3},node2{2},node3{0},node4{-4};
+    node1.next = &node2; node2.next = &node3; node3.next = &node4; node4.next = &node2;
+
+    Solution_LinkedListCycleII linkedlistcycleii;
+    ASSERT_EQ(&node2,linkedlistcycleii.detectCycle(&node1));
+
+    // std::cout<<node1.next<<std::endl;
+    // std::cout<<linkedlistcycleii.detectCycle(&node1)<<std::endl;
+}

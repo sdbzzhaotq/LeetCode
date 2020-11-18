@@ -38,5 +38,15 @@ public:
     void merge(std::vector<int>& nums1, int m, std::vector<int>& nums2, int n);
 };
 
+//142 Linked List Cycle II
+struct ListNode {
+    int val;
+    ListNode *next;
+    ListNode(int x) : val(x), next(nullptr) {}
+};
 
+class Solution_LinkedListCycleII {
+public:
+    ListNode *detectCycle(ListNode *head);
+};
 #endif

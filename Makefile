@@ -40,6 +40,9 @@ clean :
 # gtest_main.a, depending on whether it defines its own main()
 # function.
 
+LinkedListCycleIIL142.o : ./leetcode/src/LinkedListCycleIIL142.cpp
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c ./leetcode/src/LinkedListCycleIIL142.cpp
+
 MergeSortedArrayL88.o : ./leetcode/src/MergeSortedArrayL88.cpp
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c ./leetcode/src/MergeSortedArrayL88.cpp
 
@@ -61,5 +64,5 @@ AssignCookiesL455.o : ./leetcode/src/AssignCookiesL455.cpp
 leetcode_test.o : ./testcase/src/leetcode_test.cpp
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c ./testcase/src/leetcode_test.cpp
 
-main : leetcode_test.o AssignCookiesL455.o CandyL135.o NonOverlappingIntervalsL435.o CanPlaceFlowserL605.o TwoSumIIL167.o MergeSortedArrayL88.o
+main : leetcode_test.o AssignCookiesL455.o CandyL135.o NonOverlappingIntervalsL435.o CanPlaceFlowserL605.o TwoSumIIL167.o MergeSortedArrayL88.o LinkedListCycleIIL142.o
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -lpthread $^ -o $@
