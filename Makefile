@@ -24,6 +24,15 @@ CXXFLAGS += -g -Wall -Wextra -pthread -L./gtest/lib/ -lgtest
 # created to the list.
 TESTS = main
 
+TOP_PATH = $(shell pwd)
+SRC_PATH = $(TOP_PATH)/leetcode/src
+DIRS = $(shell find $(SRC_PATH) -maxdepth 3 -type d)
+
+SRCS_CPP += $(foreach dir, $(DIRS), $(wildcard $(dir)/*.cpp))
+OBJS_CPP = $(patsubst %.cpp, %.o, $(SRCS_CPP))
+
+#https://www.cnblogs.com/catgatp/p/6527251.html
+
 # All Google Test headers.  Usually you shouldn't change this
 # definition.
 GTEST_HEADERS = include/gtest/*.h \
@@ -34,35 +43,11 @@ GTEST_HEADERS = include/gtest/*.h \
 all : $(TESTS)
 
 clean :
-	rm -f $(TESTS) *.o
+	rm -f $(TESTS) $(OBJS_CPP)
 
 # Builds a sample test.  A test should link with either gtest.a or
 # gtest_main.a, depending on whether it defines its own main()
 # function.
 
-LinkedListCycleIIL142.o : ./leetcode/src/LinkedListCycleIIL142.cpp
-	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c ./leetcode/src/LinkedListCycleIIL142.cpp
-
-MergeSortedArrayL88.o : ./leetcode/src/MergeSortedArrayL88.cpp
-	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c ./leetcode/src/MergeSortedArrayL88.cpp
-
-TwoSumIIL167.o : ./leetcode/src/TwoSumIIL167.cpp
-	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c ./leetcode/src/TwoSumIIL167.cpp
-
-CanPlaceFlowserL605.o : ./leetcode/src/CanPlaceFlowserL605.cpp
-	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c ./leetcode/src/CanPlaceFlowserL605.cpp
-
-NonOverlappingIntervalsL435.o : ./leetcode/src/NonOverlappingIntervalsL435.cpp
-	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c ./leetcode/src/NonOverlappingIntervalsL435.cpp
-
-CandyL135.o : ./leetcode/src/CandyL135.cpp
-	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c ./leetcode/src/CandyL135.cpp
-
-AssignCookiesL455.o : ./leetcode/src/AssignCookiesL455.cpp
-	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c ./leetcode/src/AssignCookiesL455.cpp
-
-leetcode_test.o : ./testcase/src/leetcode_test.cpp
-	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c ./testcase/src/leetcode_test.cpp
-
-main : leetcode_test.o AssignCookiesL455.o CandyL135.o NonOverlappingIntervalsL435.o CanPlaceFlowserL605.o TwoSumIIL167.o MergeSortedArrayL88.o LinkedListCycleIIL142.o
+main : $(OBJS_CPP)
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -lpthread $^ -o $@
