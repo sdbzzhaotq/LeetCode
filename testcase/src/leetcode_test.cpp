@@ -71,6 +71,15 @@ TEST(Solution_LinkedListCycleII,detectCycle)
     Solution_LinkedListCycleII linkedlistcycleii;
     ASSERT_EQ(&node2,linkedlistcycleii.detectCycle(&node1));
 
-    // std::cout<<node1.next<<std::endl;
-    // std::cout<<linkedlistcycleii.detectCycle(&node1)<<std::endl;
+    //std::cout<<node1.next<<std::endl;
+    //std::cout<<linkedlistcycleii.detectCycle(&node1)<<std::endl;
 }
+
+TEST(Solution_Sqrt,mySqrt) 
+{
+    Solution_Sqrt sqrt;;
+    ASSERT_EQ(2,sqrt.mySqrt(8));
+    ASSERT_EQ(3,sqrt.mySqrt(9));
+    ASSERT_EQ(3,sqrt.mySqrt(10));
+}
+

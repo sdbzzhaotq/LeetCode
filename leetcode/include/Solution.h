@@ -49,4 +49,12 @@ class Solution_LinkedListCycleII {
 public:
     ListNode *detectCycle(ListNode *head);
 };
+
+//69 Sqrt(x)
+class Solution_Sqrt {
+public:
+    int mySqrt(unsigned int a);
+};
+
+
 #endif
