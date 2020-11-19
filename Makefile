@@ -29,6 +29,7 @@ SRC_PATH = $(TOP_PATH)/leetcode/src
 DIRS = $(shell find $(SRC_PATH) -maxdepth 3 -type d)
 
 SRCS_CPP += $(foreach dir, $(DIRS), $(wildcard $(dir)/*.cpp))
+SRCS_CPP += ./testcase/src/leetcode_test.cpp
 OBJS_CPP = $(patsubst %.cpp, %.o, $(SRCS_CPP))
 
 #https://www.cnblogs.com/catgatp/p/6527251.html
