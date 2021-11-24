@@ -1,22 +1,21 @@
 #include "Solution.h"
 
 std::vector<int> Solution_TwoInputII::twoSum(std::vector<int>& numbers, int target) {
-    int l = 0;
-    int r = numbers.size() - 1;
+    int left = 0;
+    int right = numbers.size() - 1;
     int sum = 0;
    
-    while (l < r) {
-        sum = numbers[l] + numbers[r];
+    while (left < right) {
+        sum = numbers[left] + numbers[right];
         if (sum == target) {
             break;
         }
 
-        if (sum < target)
-        {
-            ++l;
+        if (sum < target) {
+            ++left;
         } else {
-            --r;
+            --right;
         }
     }
-    return std::vector<int>{l + 1, r + 1};
+    return std::vector<int>{left + 1, right + 1};
 }
