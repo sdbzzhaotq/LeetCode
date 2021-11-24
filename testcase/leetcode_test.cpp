@@ -47,9 +47,13 @@ TEST(Solution_TwoInputII,twoSum)
 {
     Solution_TwoInputII twoinputii;
     std::vector<int> numbers = {2,7,11,15};
-    std::vector<int> result = {1,2};
+    std::vector<int> result = { 1,2 };
+    std::vector<int> result2 = { 2,4 };
 
     ASSERT_EQ(result,twoinputii.twoSum(numbers,9));
+    //ASSERT_EQ(result, twoinputii.twoSum_Hash(numbers, 9));
+    //ASSERT_EQ(std::vector<int>{}, twoinputii.twoSum_Hash(numbers, 10));
+    ASSERT_EQ(result2, twoinputii.twoSum_Hash(numbers, 22));
     
 }
 

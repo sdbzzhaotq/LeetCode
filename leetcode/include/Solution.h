@@ -30,6 +30,7 @@ public:
 class Solution_TwoInputII {
 public:
     std::vector<int> twoSum(std::vector<int>&numbers, int target);
+    std::vector<int> twoSum_Hash(std::vector<int>& numbers, int target);
 };
 
 //88. Merge Sorted Array
