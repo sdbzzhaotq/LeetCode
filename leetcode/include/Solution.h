@@ -57,5 +57,10 @@ public:
     int mySqrt(unsigned int a);
 };
 
+//L448
+class Solution_ArrayFindAllNumbersDisappearedInArray {
+public:
+    std::vector<int> findDisappearedNumbers(std::vector<int>& nums);
+};
 
 #endif

@@ -38,28 +38,31 @@
     <ClInclude Include="leetcode\include\Solution.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="leetcode\src\AssignCookiesL455.cpp">
+    <ClCompile Include="leetcode\src\AssignCookies.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="leetcode\src\CandyL135.cpp">
+    <ClCompile Include="leetcode\src\Candy.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="leetcode\src\CanPlaceFlowserL605.cpp">
+    <ClCompile Include="leetcode\src\CanPlaceFlowser.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="leetcode\src\LinkedListCycleIIL142.cpp">
+    <ClCompile Include="leetcode\src\ArrayFindAllNumbersDisappearedInArray.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="leetcode\src\MergeSortedArrayL88.cpp">
+    <ClCompile Include="leetcode\src\LinkedListCycleII.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="leetcode\src\NonOverlappingIntervalsL435.cpp">
+    <ClCompile Include="leetcode\src\MergeSortedArray.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="leetcode\src\SqrtL69.cpp">
+    <ClCompile Include="leetcode\src\NonOverlappingIntervals.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="leetcode\src\TwoSumIIL167.cpp">
+    <ClCompile Include="leetcode\src\Sqrt.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="leetcode\src\TwoSumII.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="testcase\leetcode_test.cpp">

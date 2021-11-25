@@ -1,5 +1,5 @@
 #include "Solution.h"
-
+//L69
 int Solution_Sqrt::mySqrt(unsigned int a) {
     if( 0==a ) return a;
 
