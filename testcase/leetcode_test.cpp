@@ -1,4 +1,3 @@
-//#include "pch.h"
 #include "gtest/gtest.h"
 #include "leetcode_functions.h"
 
@@ -88,7 +87,7 @@ TEST(Solution_Sqrt,mySqrt)
     ASSERT_EQ(3,sqrt.mySqrt(9));
     ASSERT_EQ(3,sqrt.mySqrt(10));
 }
-#endif
+
 
 TEST(Solution_ArrayFindAllNumbersDisappearedInArray_TEST, myDisappearedArray) {
     Solution_ArrayFindAllNumbersDisappearedInArray disapperadArray;
@@ -105,3 +104,20 @@ TEST(Solution_ArrayFindAllNumbersDisappearedInArray_TEST, myDisappearedArray) {
     ASSERT_EQ(resut3, disapperadArray.findDisappearedNumbers(array3));
 
 }
+#endif
+TEST(Solution_Solution_RotateImage_TEST, Rotate) {
+    Solution_RotateImage rotateimage;
+
+    std::vector<std::vector<int>> matrix1 = { {1,2,3},{4,5,6},{7,8,9} };
+    std::vector<std::vector<int>> result1 = { {7,4,1},{8,5,2},{9,6,3} };
+    rotateimage.rotate(matrix1);
+    ASSERT_EQ(result1, matrix1);
+
+    std::vector<std::vector<int>> matrix2 = { {1,2,3,4},{5,6,7,8},{9,10,11,12},{13,14,15,16} };
+    std::vector<std::vector<int>> result2 = { {13,9,5,1},{14,10,6,2},{15,11,7,3},{16,12,8,4} };
+    rotateimage.rotate(matrix2);
+    ASSERT_EQ(result2, matrix2);
+    //i < n / 2修改为i <= n / 2，大大的错误
+    
+}
+

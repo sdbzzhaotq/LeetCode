@@ -63,4 +63,10 @@ public:
     std::vector<int> findDisappearedNumbers(std::vector<int>& nums);
 };
 
+class Solution_RotateImage {
+public:
+    void rotate(std::vector<std::vector<int>>& matrix);
+};
+
+
 #endif
