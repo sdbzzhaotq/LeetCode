@@ -7,5 +7,7 @@ https://cloud.tencent.com/developer/article/1498258 <p>
 下载地址<p>
 https://codeload.github.com/google/googletest/tar.gz/release-1.7.0
 
+Windows下使用Visaul Studio直接有gtest的模板工程，很方便
+  
 跟着 [LeetCode 101](https://github.com/changgyhub/leetcode_101) 刷题，尽量保持一天至少1题，一周最少5题。
 教程很好，就是缺少一些讲解。慢慢悟吧
