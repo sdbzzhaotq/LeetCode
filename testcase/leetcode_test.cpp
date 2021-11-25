@@ -2,6 +2,7 @@
 #include "gtest/gtest.h"
 #include "leetcode_functions.h"
 
+#if 0
 TEST(Solution_AssginCookies_Test,findContentChildren)
 {   
     std::vector<int> children = {2,1};
@@ -51,8 +52,8 @@ TEST(Solution_TwoInputII,twoSum)
     std::vector<int> result2 = { 2,4 };
 
     ASSERT_EQ(result,twoinputii.twoSum(numbers,9));
-    //ASSERT_EQ(result, twoinputii.twoSum_Hash(numbers, 9));
-    //ASSERT_EQ(std::vector<int>{}, twoinputii.twoSum_Hash(numbers, 10));
+    ASSERT_EQ(result, twoinputii.twoSum_Hash(numbers, 9));
+    ASSERT_EQ(std::vector<int>{}, twoinputii.twoSum_Hash(numbers, 10));
     ASSERT_EQ(result2, twoinputii.twoSum_Hash(numbers, 22));
     
 }
@@ -79,11 +80,28 @@ TEST(Solution_LinkedListCycleII,detectCycle)
     //std::cout<<linkedlistcycleii.detectCycle(&node1)<<std::endl;
 }
 
+
 TEST(Solution_Sqrt,mySqrt) 
 {
-    Solution_Sqrt sqrt;;
+    Solution_Sqrt sqrt;
     ASSERT_EQ(2,sqrt.mySqrt(8));
     ASSERT_EQ(3,sqrt.mySqrt(9));
     ASSERT_EQ(3,sqrt.mySqrt(10));
 }
+#endif
 
+TEST(Solution_ArrayFindAllNumbersDisappearedInArray_TEST, myDisappearedArray) {
+    Solution_ArrayFindAllNumbersDisappearedInArray disapperadArray;
+    std::vector<int> array1 = { 4, 3, 2, 7, 8, 2, 3, 1 };
+    std::vector<int> resut1 = { 5, 6 };
+    ASSERT_EQ(resut1, disapperadArray.findDisappearedNumbers(array1));
+
+    std::vector<int> array2 = { 1, 2, 3, 4, 5, 6, 7, 8 };
+    std::vector<int> resut2 = {};
+    ASSERT_EQ(resut2, disapperadArray.findDisappearedNumbers(array2));
+
+    std::vector<int> array3 = { 4, 3, 3, 7, 8, 3, 3, 1 };
+    std::vector<int> resut3 = { 2, 5, 6};
+    ASSERT_EQ(resut3, disapperadArray.findDisappearedNumbers(array3));
+
+}
