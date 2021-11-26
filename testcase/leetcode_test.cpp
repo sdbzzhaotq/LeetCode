@@ -104,8 +104,8 @@ TEST(Solution_ArrayFindAllNumbersDisappearedInArray_TEST, myDisappearedArray) {
     ASSERT_EQ(resut3, disapperadArray.findDisappearedNumbers(array3));
 
 }
-#endif
-TEST(Solution_Solution_RotateImage_TEST, Rotate) {
+
+TEST(Solution_RotateImage_TEST, Rotate) {
     Solution_RotateImage rotateimage;
 
     std::vector<std::vector<int>> matrix1 = { {1,2,3},{4,5,6},{7,8,9} };
@@ -118,6 +118,17 @@ TEST(Solution_Solution_RotateImage_TEST, Rotate) {
     rotateimage.rotate(matrix2);
     ASSERT_EQ(result2, matrix2);
     //i < n / 2修改为i <= n / 2，大大的错误
-    
+}
+#endif
+
+TEST(Solution_QueueUsingStacks_TEST, Queue) {
+    QueueUsingStacks mQueue;
+    ASSERT_EQ(true, mQueue.empty());
+    mQueue.push(1);
+    ASSERT_EQ(1, mQueue.peek());
+    mQueue.push(2);
+    ASSERT_EQ(1, mQueue.pop());
+    ASSERT_EQ(2, mQueue.pop());
+    ASSERT_EQ(true, mQueue.empty());
 }
 

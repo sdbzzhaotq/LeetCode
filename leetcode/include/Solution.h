@@ -63,10 +63,23 @@ public:
     std::vector<int> findDisappearedNumbers(std::vector<int>& nums);
 };
 
+//48
 class Solution_RotateImage {
 public:
     void rotate(std::vector<std::vector<int>>& matrix);
 };
 
+//232 Implement Queue using Stacks
+
+class QueueUsingStacks {
+    std::stack<int> in, out;
+public:
+    QueueUsingStacks();
+    void push(int x);
+    int pop();
+    int peek();
+    bool empty();
+    void in2out();
+};
 
 #endif
