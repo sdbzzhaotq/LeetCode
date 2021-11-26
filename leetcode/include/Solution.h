@@ -70,7 +70,6 @@ public:
 };
 
 //232 Implement Queue using Stacks
-
 class QueueUsingStacks {
     std::stack<int> in, out;
 public:
@@ -81,5 +80,13 @@ public:
     bool empty();
     void in2out();
 };
+
+//20 Valid Parentheses
+
+class Solution_Valid_Parentheses {
+public:
+    bool isValid(std::string str);
+};
+
 
 #endif

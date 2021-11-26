@@ -119,7 +119,7 @@ TEST(Solution_RotateImage_TEST, Rotate) {
     ASSERT_EQ(result2, matrix2);
     //i < n / 2修改为i <= n / 2，大大的错误
 }
-#endif
+
 
 TEST(Solution_QueueUsingStacks_TEST, Queue) {
     QueueUsingStacks mQueue;
@@ -131,4 +131,12 @@ TEST(Solution_QueueUsingStacks_TEST, Queue) {
     ASSERT_EQ(2, mQueue.pop());
     ASSERT_EQ(true, mQueue.empty());
 }
+#endif
 
+TEST(Solution_Valid_Parentheses_TEST, isValid) {
+    Solution_Valid_Parentheses valid_parentheses;
+    //ASSERT_EQ(true,valid_parentheses.isValid("{[]}()"));
+    //ASSERT_EQ(true, valid_parentheses.isValid(""));
+    ASSERT_EQ(false, valid_parentheses.isValid("a"));
+    //ASSERT_EQ(false, valid_parentheses.isValid("{{[[]]}})"));
+}
