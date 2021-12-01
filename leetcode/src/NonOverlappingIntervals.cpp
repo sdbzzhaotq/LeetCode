@@ -1,13 +1,13 @@
 #include "Solution.h"
 //L435
 int Solution_NonOverlappingInterval::eraseOverlapIntervals(std::vector<std::vector<int>>& intervals) {
-    if(intervals.empty()) {
-        return 0;
-    }
+    if(intervals.empty()) { return 0;}
 
-    int n = intervals.size();
-    sort(intervals.begin(),intervals.end(),[](std::vector<int> a, std::vector<int> b) {return a[1] < b[1];});
-
+    auto n = intervals.size();
+    std::sort(intervals.begin(),intervals.end(),
+        [](std::vector<int> a, std::vector<int> b) { return a[1] < b[1]; }
+    );
+    //Lambda±í´ïÊ½
 
     int total = 0;
     int prev = intervals[0][1];

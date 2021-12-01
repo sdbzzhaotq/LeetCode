@@ -11,7 +11,7 @@ public:
 
 class Solution_Candy {
 public:
-    int candy(std::vector<int>& ratings);
+    size_t candy(std::vector<int>& ratings);
 };
 
 //Non-overlapping Intervals
@@ -82,10 +82,15 @@ public:
 };
 
 //20 Valid Parentheses
-
 class Solution_Valid_Parentheses {
 public:
     bool isValid(std::string str);
+};
+
+// 695
+class Solution_Max_Area_Island {
+public:
+    int maxAreaOfIsland(std::vector<std::vector<int>>&grid);
 };
 
 

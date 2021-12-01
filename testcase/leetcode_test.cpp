@@ -3,17 +3,22 @@
 
 #if 0
 TEST(Solution_AssginCookies_Test,findContentChildren)
-{   
-    std::vector<int> children = {2,1};
-    std::vector<int> cookies = {2,1,3};
-    //for (const auto &c : children) std::cout << c << " ";
-    //for (const auto &c : cookies) std::cout << c << " ";
+{
+    std::vector<int> children = {};
+    std::vector<int> cookies = {};
     Solution_AssginCookies assgincookies;
+
+    children = {2,1};
+    cookies = {2,1,3};
     ASSERT_EQ(2,assgincookies.findContentChildren(children,cookies));
     
     children = {1,3,2};
     cookies = {1,1};
     ASSERT_EQ(1,assgincookies.findContentChildren(children,cookies));
+
+    children = { 3,2 };
+    cookies = { 1,1,2,2,4 };
+    ASSERT_EQ(2, assgincookies.findContentChildren(children, cookies));
 }
 
 
@@ -131,12 +136,22 @@ TEST(Solution_QueueUsingStacks_TEST, Queue) {
     ASSERT_EQ(2, mQueue.pop());
     ASSERT_EQ(true, mQueue.empty());
 }
-#endif
 
 TEST(Solution_Valid_Parentheses_TEST, isValid) {
     Solution_Valid_Parentheses valid_parentheses;
-    //ASSERT_EQ(true,valid_parentheses.isValid("{[]}()"));
-    //ASSERT_EQ(true, valid_parentheses.isValid(""));
+    ASSERT_EQ(true,valid_parentheses.isValid("{[]}()"));
+    ASSERT_EQ(true, valid_parentheses.isValid(""));
     ASSERT_EQ(false, valid_parentheses.isValid("a"));
-    //ASSERT_EQ(false, valid_parentheses.isValid("{{[[]]}})"));
+    ASSERT_EQ(false, valid_parentheses.isValid("{{[[]]}})"));
+
+}
+#endif
+
+TEST(Solution_Max_Area_Island_TEST, maxAreaOfIsland) {
+    Solution_Max_Area_Island max_island;
+    std::vector<std::vector<int>> island ={}; 
+    island = { {1,0,1,1,0,1,0,1}, {1,0,1,1,0,1,1,1},{0,0,0,0,0,0,0,1} };
+    ASSERT_EQ(6, max_island.maxAreaOfIsland(island));
+    island = { {1,0,1,1,0,1,0,1}, {1,0,1,1,0,1,0,1},{0,0,0,0,0,0,0,1} };
+    ASSERT_EQ(4, max_island.maxAreaOfIsland(island));
 }
