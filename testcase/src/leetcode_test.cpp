@@ -1,6 +1,7 @@
 #include "gtest/gtest.h"
 #include "leetcode_functions.h"
 #include <thread>
+#include <bitset>
 
 #if 0
 TEST(Solution_AssginCookies_Test,findContentChildren)
@@ -146,9 +147,9 @@ TEST(Solution_Valid_Parentheses_TEST, isValid) {
     ASSERT_EQ(false, valid_parentheses.isValid("{{[[]]}})"));
 
 }
-#endif
 
 TEST(Solution_Max_Area_Island_TEST, maxAreaOfIsland) {
+    std::cout << __cplusplus << std::endl;
     Solution_Max_Area_Island max_island;
     std::vector<std::vector<int>> island ={}; 
     island = { {1,0,1,1,0,1,0,1}, {1,0,1,1,0,1,1,1},{0,0,0,0,0,0,0,1} };
@@ -156,3 +157,24 @@ TEST(Solution_Max_Area_Island_TEST, maxAreaOfIsland) {
     island = { {1,0,1,1,0,1,0,1}, {1,0,1,1,0,1,0,1},{0,0,0,0,0,0,0,1} };
     ASSERT_EQ(4, max_island.maxAreaOfIsland(island));
 }
+#endif
+
+void first_print() {
+    printf("Frist\n");
+}
+
+void second_print() {
+    printf("Second\n");
+}
+
+void third_print() {
+    printf("Third\n");
+}
+
+TEST(Solution_Orderd_Print_TEST, ordered_print) {
+    Solution_Orderd_Print orderdprint;
+    orderdprint.second(second_print);
+    orderdprint.first(first_print);
+    orderdprint.third(third_print);
+}
+

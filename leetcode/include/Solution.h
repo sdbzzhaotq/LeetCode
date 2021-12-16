@@ -93,5 +93,17 @@ public:
     int maxAreaOfIsland(std::vector<std::vector<int>>&grid);
 };
 
+// L1114
+class Solution_Orderd_Print {
+private:
+    std::condition_variable cv;
+    std::mutex mtx;
+    int k = 0;
+public:
+    void first(std::function<void()> printFirst);
+    void second(std::function<void()> printSecond);
+    void third(std::function<void()> printThird);
+};
+
 
 #endif
