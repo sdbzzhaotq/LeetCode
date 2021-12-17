@@ -159,6 +159,8 @@ TEST(Solution_Max_Area_Island_TEST, maxAreaOfIsland) {
 }
 #endif
 
+Solution_Orderd_Print orderdprint;
+
 void first_print() {
     printf("Frist\n");
 }
@@ -171,10 +173,26 @@ void third_print() {
     printf("Third\n");
 }
 
-TEST(Solution_Orderd_Print_TEST, ordered_print) {
-    Solution_Orderd_Print orderdprint;
-    orderdprint.second(second_print);
+void first_func() {
     orderdprint.first(first_print);
+}
+
+void second_func() {
+    orderdprint.second(second_print);
+}
+
+void third_func() {
     orderdprint.third(third_print);
+}
+
+TEST(Solution_Orderd_Print_TEST, ordered_print) {
+
+    std::thread t3(third_func);
+    std::thread t2(second_func);
+    std::thread t1(first_func);
+
+    t1.join();
+    t2.join();
+    t3.join();
 }
 
