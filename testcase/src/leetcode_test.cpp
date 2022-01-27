@@ -3,7 +3,6 @@
 #include <thread>
 #include <bitset>
 
-#if 0
 TEST(Solution_AssginCookies_Test,findContentChildren)
 {
     std::vector<int> children = {};
@@ -124,7 +123,6 @@ TEST(Solution_RotateImage_TEST, Rotate) {
     std::vector<std::vector<int>> result2 = { {13,9,5,1},{14,10,6,2},{15,11,7,3},{16,12,8,4} };
     rotateimage.rotate(matrix2);
     ASSERT_EQ(result2, matrix2);
-    //i < n / 2�޸�Ϊi <= n / 2�����Ĵ���
 }
 
 
@@ -157,7 +155,6 @@ TEST(Solution_Max_Area_Island_TEST, maxAreaOfIsland) {
     island = { {1,0,1,1,0,1,0,1}, {1,0,1,1,0,1,0,1},{0,0,0,0,0,0,0,1} };
     ASSERT_EQ(4, max_island.maxAreaOfIsland(island));
 }
-#endif
 
 Solution_Orderd_Print orderdprint;
 
@@ -191,11 +188,11 @@ TEST(Solution_Orderd_Print_TEST, ordered_print) {
     std::vector<int> vec{ 1,2,3,4,5 };
     for (int num : vec) {
         num = num + 10;
-        std::cout << num << std::endl;
+        //std::cout << num << std::endl;
     }
 
     for (auto num : vec) {
-        std::cout << num << std::endl;
+        //std::cout << num << std::endl;
     }
 
 
