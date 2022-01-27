@@ -187,6 +187,18 @@ void third_func() {
 
 TEST(Solution_Orderd_Print_TEST, ordered_print) {
 
+
+    std::vector<int> vec{ 1,2,3,4,5 };
+    for (int num : vec) {
+        num = num + 10;
+        std::cout << num << std::endl;
+    }
+
+    for (auto num : vec) {
+        std::cout << num << std::endl;
+    }
+
+
     std::thread t3(third_func);
     std::thread t2(second_func);
     std::thread t1(first_func);
@@ -195,4 +207,9 @@ TEST(Solution_Orderd_Print_TEST, ordered_print) {
     t2.join();
     t3.join();
 }
+
+GTEST_API_ int mian(int argc, char** argv) {
+    testing::InitGoogleTest(&argc, argv);
+    return RUN_ALL_TESTS();
+ }
 
