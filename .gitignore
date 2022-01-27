@@ -361,3 +361,8 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+*.o
+build
+.DS_Store
+.vscode/
+.vscode/settings.json

@@ -1,18 +1,18 @@
 #include "Solution.h"
 //L448
 /*
-*¸ø¶¨Ò»¸ö³¤¶ÈÎªn µÄÊý×é£¬ÆäÖÐ°üº¬·¶Î§Îª1 µ½n µÄÕûÊý£¬ÓÐÐ©ÕûÊýÖØ¸´ÁË¶à´Î£¬ÓÐÐ©ÕûÊý
-*Ã»ÓÐ³öÏÖ£¬Çó1 µ½n ÖÐÃ»ÓÐ³öÏÖ¹ýµÄÕûÊý¡£
+*ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªn ï¿½ï¿½ï¿½ï¿½ï¿½é£¬ï¿½ï¿½ï¿½Ð°ï¿½ï¿½ï¿½ï¿½ï¿½Î§Îª1 ï¿½ï¿½n ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð©ï¿½ï¿½ï¿½ï¿½ï¿½Ø¸ï¿½ï¿½Ë¶ï¿½Î£ï¿½ï¿½ï¿½Ð©ï¿½ï¿½ï¿½ï¿½
+*Ã»ï¿½Ð³ï¿½ï¿½Ö£ï¿½ï¿½ï¿½1 ï¿½ï¿½n ï¿½ï¿½Ã»ï¿½Ð³ï¿½ï¿½Ö¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 */
 
-/*ÀûÓÃÊý×éµÄ½á¹¹£¬½¨Á¢n¸öÍ°£¬ÔÚÔ­Êý×é½øÐÐ±ê¼Ç£¬Èç¹ûÄ³¸öÊý³öÏÖ£¬Ôò´ËÊý¶ÔÓ¦Î»ÖÃ(pos-1)±äÎª¸ºÊý*/
+/*ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä½á¹¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½nï¿½ï¿½Í°ï¿½ï¿½ï¿½ï¿½Ô­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð±ï¿½Ç£ï¿½ï¿½ï¿½ï¿½Ä³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦Î»ï¿½ï¿½(pos-1)ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½*/
 std::vector<int> Solution_ArrayFindAllNumbersDisappearedInArray::findDisappearedNumbers(std::vector<int>& nums) {
-	for (auto num : nums) {
+	for (int num : nums) {
 		int pos = abs(num) - 1;
 		nums[pos] = nums[pos] > 0 ? -nums[pos] : nums[pos];
 	}
 
-	std::vector<int> ans = {};
+	std::vector<int> ans = {0};
 	for (int i = 0; i < nums.size(); i++) {
 		if (nums[i] > 0) {
 			ans.push_back(i + 1);

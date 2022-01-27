@@ -17,7 +17,7 @@ public:
 //Non-overlapping Intervals
 class Solution_NonOverlappingInterval {
 public:
-    int eraseOverlapIntervals(std::vector<std::vector<int>>& intervals);
+    int eraseOverlapIntervals(std::vector<std::vector<int> >& intervals);
 };
 
 // Can Place Flowser
@@ -66,7 +66,7 @@ public:
 //48
 class Solution_RotateImage {
 public:
-    void rotate(std::vector<std::vector<int>>& matrix);
+    void rotate(std::vector<std::vector<int> >& matrix);
 };
 
 //232 Implement Queue using Stacks
@@ -90,7 +90,7 @@ public:
 // 695
 class Solution_Max_Area_Island {
 public:
-    int maxAreaOfIsland(std::vector<std::vector<int>>&grid);
+    int maxAreaOfIsland(std::vector<std::vector<int> >&grid);
 };
 
 // L1114

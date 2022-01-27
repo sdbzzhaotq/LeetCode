@@ -124,7 +124,7 @@ TEST(Solution_RotateImage_TEST, Rotate) {
     std::vector<std::vector<int>> result2 = { {13,9,5,1},{14,10,6,2},{15,11,7,3},{16,12,8,4} };
     rotateimage.rotate(matrix2);
     ASSERT_EQ(result2, matrix2);
-    //i < n / 2ÐÞ¸ÄÎªi <= n / 2£¬´ó´óµÄ´íÎó
+    //i < n / 2ï¿½Þ¸ï¿½Îªi <= n / 2ï¿½ï¿½ï¿½ï¿½ï¿½Ä´ï¿½ï¿½ï¿½
 }
 
 
@@ -208,8 +208,7 @@ TEST(Solution_Orderd_Print_TEST, ordered_print) {
     t3.join();
 }
 
-GTEST_API_ int mian(int argc, char** argv) {
+GTEST_API_ int main(int argc, char** argv) {
     testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
  }
-
