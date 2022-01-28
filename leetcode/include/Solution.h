@@ -121,6 +121,7 @@ private:
     int DeepFirstSearch(TreeNode* node);
 public:
     int sumOfLeftLeaves_Recusion(TreeNode* root);
+    int SumofLeftLeaves_Stack(TreeNode* root);
 };
 
 #endif

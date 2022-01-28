@@ -220,6 +220,7 @@ TEST(Solution_Sum_Left_Leaves_TEST, sumOfLeftLeaves) {
     TreeNode* node1 = new TreeNode(1, node2, node3);
     Solution_Sum_Left_Leaves sumleftsums;
     ASSERT_EQ(4, sumleftsums.sumOfLeftLeaves_Recusion(node1));
+    ASSERT_EQ(4, sumleftsums.SumofLeftLeaves_Stack(node1));
 }
 
 
