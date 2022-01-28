@@ -213,14 +213,21 @@ TEST(Solution_Sum_Left_Leaves_TEST, sumOfLeftLeaves) {
               /       \
              4         5
     */
-    TreeNode* node4 = new TreeNode(4);
-    TreeNode* node5 = new TreeNode(5);
-    TreeNode* node2 = new TreeNode(2, node4, nullptr);
-    TreeNode* node3 = new TreeNode(3, nullptr, node5);
-    TreeNode* node1 = new TreeNode(1, node2, node3);
+    TreeNode node4{ 4 };
+    TreeNode node5{ 5 };
+    TreeNode node2{ 2, &node4, nullptr };
+    TreeNode node3{ 3, nullptr, &node5 };
+    TreeNode node1{ 1, &node2, &node3 };
     Solution_Sum_Left_Leaves sumleftsums;
-    ASSERT_EQ(4, sumleftsums.sumOfLeftLeaves_Recusion(node1));
-    ASSERT_EQ(4, sumleftsums.SumofLeftLeaves_Stack(node1));
+    ASSERT_EQ(4, sumleftsums.sumOfLeftLeaves_Recusion(&node1));
+    ASSERT_EQ(4, sumleftsums.sumOfLeftLeaves_Stack(&node1));
+    ASSERT_EQ(4, sumleftsums.sumOfLeftLeaves_DFS(&node1));
+    ASSERT_EQ(0, sumleftsums.sumOfLeftLeaves_DFS(&node4));
+    ASSERT_EQ(0, sumleftsums.sumOfLeftLeaves_DFS(&node3));
+    ASSERT_EQ(4, sumleftsums.sumOfLeftLeaves_DFS(&node2));
+
+
+
 }
 
 

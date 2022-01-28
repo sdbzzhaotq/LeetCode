@@ -1,13 +1,5 @@
 #include "Solution.h"
 
-bool Solution_Sum_Left_Leaves::isLeaf(TreeNode* node) {
-	return (!node->left) && (!node->right);
-}
-
-int Solution_Sum_Left_Leaves::DeepFirstSearch(TreeNode* node) {
-	return 0;
-}
-
 int Solution_Sum_Left_Leaves::sumOfLeftLeaves_Recusion(TreeNode* root) {
 	if (!root) { return 0; }
 
@@ -20,7 +12,7 @@ int Solution_Sum_Left_Leaves::sumOfLeftLeaves_Recusion(TreeNode* root) {
 	return sum + sumOfLeftLeaves_Recusion(root->left) + sumOfLeftLeaves_Recusion(root->right);
 }
 
-int Solution_Sum_Left_Leaves::SumofLeftLeaves_Stack(TreeNode* root) {
+int Solution_Sum_Left_Leaves::sumOfLeftLeaves_Stack(TreeNode* root) {
 	if (!root) { return 0; }
 
 	std::stack<TreeNode*> st;
@@ -37,4 +29,28 @@ int Solution_Sum_Left_Leaves::SumofLeftLeaves_Stack(TreeNode* root) {
 		if (node->right) { st.push(node->right); }
 	}
 	return sum;
+}
+
+bool Solution_Sum_Left_Leaves::isLeaf(TreeNode* node) {
+	return !node->left && !node->right;
+}
+
+int Solution_Sum_Left_Leaves::DeepFirstSearch(TreeNode* node) {
+	int sum = 0;
+	if (node->left) {
+		sum += isLeaf(node->left) ? node->left->val : DeepFirstSearch(node->left);
+	}
+	if (node->right/* && !isLeaf(node->right)*/) {
+		sum += DeepFirstSearch(node->right);
+	}
+
+	return sum;
+}
+
+int Solution_Sum_Left_Leaves::sumOfLeftLeaves_DFS(TreeNode* root) {
+	return root ? DeepFirstSearch(root) : 0;
+}
+
+int Solution_Sum_Left_Leaves::sumOfLeftLeaves_BFS(TreeNode* root) {
+	return 0;
 }
