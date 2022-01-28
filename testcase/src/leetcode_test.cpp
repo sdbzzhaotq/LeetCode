@@ -205,6 +205,24 @@ TEST(Solution_Orderd_Print_TEST, ordered_print) {
     t3.join();
 }
 
+TEST(Solution_Sum_Left_Leaves_TEST, sumOfLeftLeaves) {
+    /*
+                  1
+                /   \
+               2     3
+              /       \
+             4         5
+    */
+    TreeNode* node4 = new TreeNode(4);
+    TreeNode* node5 = new TreeNode(5);
+    TreeNode* node2 = new TreeNode(2, node4, nullptr);
+    TreeNode* node3 = new TreeNode(3, nullptr, node5);
+    TreeNode* node1 = new TreeNode(1, node2, node3);
+    Solution_Sum_Left_Leaves sumleftsums;
+    ASSERT_EQ(4, sumleftsums.sumOfLeftLeaves_Recusion(node1));
+}
+
+
 GTEST_API_ int main(int argc, char** argv) {
     testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
