@@ -225,11 +225,42 @@ TEST(Solution_Sum_Left_Leaves_TEST, sumOfLeftLeaves) {
     ASSERT_EQ(0, sumleftsums.sumOfLeftLeaves_DFS(&node4));
     ASSERT_EQ(0, sumleftsums.sumOfLeftLeaves_DFS(&node3));
     ASSERT_EQ(4, sumleftsums.sumOfLeftLeaves_DFS(&node2));
-
-
-
 }
 
+TEST(Solution_Binary_Search_TEST, mySearch) {
+    std::vector<int> nums = {-1,0,3,5,9,12};
+    Solution_Binary_Search mysearch;
+    ASSERT_EQ(4, mysearch.search(nums,9));
+    ASSERT_EQ(1, mysearch.search(nums,0));
+    ASSERT_EQ(-1, mysearch.search(nums,2));
+}
+
+TEST(Solution_Binary_Search_Insert_TEST, mySearchInsert) {
+    std::vector<int> nums = {-1,0,3,5,9,12};
+    Solution_Binary_Search_Insert mysearchinsert;
+    ASSERT_EQ(1, mysearchinsert.searchInsert(nums,0));
+    ASSERT_EQ(2, mysearchinsert.searchInsert(nums,2));
+    ASSERT_EQ(6, mysearchinsert.searchInsert(nums,15));
+    nums = {1,3,5,6};
+    ASSERT_EQ(2, mysearchinsert.searchInsert(nums,5));
+    ASSERT_EQ(1, mysearchinsert.searchInsert(nums,2));
+    ASSERT_EQ(4, mysearchinsert.searchInsert(nums,7));
+}
+
+TEST(Solution_Square_Sorted_Array_TEST, mysortedSquares) {
+    std::vector<int> input1 = {-5,-3,-2,0,1,3,7};
+    std::vector<int> output1 = {0,1,4,9,9,25,49};
+    Solution_Square_Sorted_Array mysortedSquares;
+    ASSERT_EQ(output1, mysortedSquares.sortedSquares(input1));
+
+    std::vector<int> input2 = {-4,-1,0,3,10};
+    std::vector<int> output2 = {0,1,9,16,100};
+    ASSERT_EQ(output2, mysortedSquares.sortedSquares(input2));
+
+    std::vector<int> input3 = {-7,-3,2,3,11};
+    std::vector<int> output3 = {4,9,9,49,121};
+    ASSERT_EQ(output3, mysortedSquares.sortedSquares(input3));
+}
 
 GTEST_API_ int main(int argc, char** argv) {
     testing::InitGoogleTest(&argc, argv);

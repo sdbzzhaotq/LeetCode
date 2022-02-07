@@ -126,4 +126,22 @@ public:
     int sumOfLeftLeaves_BFS(TreeNode* root);
 };
 
+//704. Binary Search
+class Solution_Binary_Search {
+public:
+    int search(std::vector<int>& nums, int target);
+};
+
+//35. Search Insert Position
+class Solution_Binary_Search_Insert {
+public:
+    int searchInsert(std::vector<int>& nums, int target);
+};
+
+//977. Squares of a Sorted Array
+class Solution_Square_Sorted_Array {
+public:
+    std::vector<int> sortedSquares(std::vector<int>& nums);
+};
+
 #endif
