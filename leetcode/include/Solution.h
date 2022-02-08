@@ -144,4 +144,13 @@ public:
     std::vector<int> sortedSquares(std::vector<int>& nums);
 };
 
+//189. Rotate Array
+class Solution_Rotate_Array {
+private:
+    void reverse(std::vector<int>& nums, int start, int end);
+public:
+    void rotate1(std::vector<int>& nums, int k);
+    void rotate2(std::vector<int>& nums, int k);
+};
+
 #endif

@@ -262,6 +262,27 @@ TEST(Solution_Square_Sorted_Array_TEST, mysortedSquares) {
     ASSERT_EQ(output3, mysortedSquares.sortedSquares(input3));
 }
 
+TEST(Solution_Rotate_Array_TEST, myRotate) {
+    Solution_Rotate_Array myrotate;
+
+    std::vector<int> input1 = {-1,0,3,5,9,12};
+    std::vector<int> output1 = {5,9,12,-1,0,3};
+    myrotate.rotate2(input1,3);
+    ASSERT_EQ(output1, input1);
+
+    std::vector<int> input2 = {1,2,3,4,5,6,7};
+    std::vector<int> output2 = {5,6,7,1,2,3,4};
+    myrotate.rotate2(input2,3);
+    ASSERT_EQ(output2, input2);
+
+    std::vector<int> input3 = {-1,-100,3,99};
+    std::vector<int> output3 = {3,99,-1,-100};
+    myrotate.rotate2(input3,2);
+    ASSERT_EQ(output3, input3);
+}
+
+
+
 GTEST_API_ int main(int argc, char** argv) {
     testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
