@@ -10,3 +10,9 @@
 #include <functional>
 #include <mutex>
 #include <condition_variable>
+
+struct ListNode {
+    int val;
+    ListNode *next;
+    ListNode(int x) : val(x), next(nullptr) {}
+};

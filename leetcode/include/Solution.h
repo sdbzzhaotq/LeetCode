@@ -40,12 +40,6 @@ public:
 };
 
 //142 Linked List Cycle II
-struct ListNode {
-    int val;
-    ListNode *next;
-    ListNode(int x) : val(x), next(nullptr) {}
-};
-
 class Solution_LinkedListCycleII {
 public:
     ListNode *detectCycle(ListNode *head);
