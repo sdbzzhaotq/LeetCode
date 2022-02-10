@@ -291,6 +291,16 @@ TEST(Solution_Replace_Space_String_TEST, myreplaceSpace) {
     ASSERT_EQ("Wearehappy.", myreplaceSapce.replaceSpaceII("Wearehappy."));
 }
 
+TEST(Solution_Revert_Print_List_TEST,myreversePrint) {
+    ListNode node1{3},node2{2},node3{0},node4{-4};
+    node1.next = &node2; node2.next = &node3; node3.next = &node4;
+    std::vector<int> ans1 = {-4, 0, 2, 3};
+
+    Solution_Revert_Print_List myreversePrint;
+    ASSERT_EQ(ans1,myreversePrint.reversePrint(&node1));
+    ASSERT_EQ(ans1,myreversePrint.reverseRecursion(&node1));
+}
+
 GTEST_API_ int main(int argc, char** argv) {
     testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();

@@ -153,5 +153,13 @@ public:
     std::string replaceSpaceII(std::string s);
 };
 
+class Solution_Revert_Print_List {
+private:
+    std::vector<int> ans;
+    void recursion(ListNode* head);
+public:
+    std::vector<int> reversePrint(ListNode* head);
+    std::vector<int> reverseRecursion(ListNode* head);
+};
 
 #endif
