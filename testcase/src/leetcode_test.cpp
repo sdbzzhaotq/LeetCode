@@ -281,7 +281,15 @@ TEST(Solution_Rotate_Array_TEST, myRotate) {
     ASSERT_EQ(output3, input3);
 }
 
+TEST(Solution_Replace_Space_String_TEST, myreplaceSpace) {
+    Solution_Replace_Space_String myreplaceSapce;
 
+    ASSERT_EQ("We%20are%20happy.", myreplaceSapce.replaceSpace("We are happy."));
+    ASSERT_EQ("Wearehappy.", myreplaceSapce.replaceSpace("Wearehappy."));
+
+    ASSERT_EQ("We%20are%20happy.", myreplaceSapce.replaceSpaceII("We are happy."));
+    ASSERT_EQ("Wearehappy.", myreplaceSapce.replaceSpaceII("Wearehappy."));
+}
 
 GTEST_API_ int main(int argc, char** argv) {
     testing::InitGoogleTest(&argc, argv);

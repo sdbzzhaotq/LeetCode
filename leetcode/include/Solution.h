@@ -153,4 +153,11 @@ public:
     void rotate2(std::vector<int>& nums, int k);
 };
 
+class Solution_Replace_Space_String {
+public:
+    std::string replaceSpace(std::string s);
+    std::string replaceSpaceII(std::string s);
+};
+
+
 #endif
