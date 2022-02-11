@@ -301,6 +301,25 @@ TEST(Solution_Revert_Print_List_TEST,myreversePrint) {
     ASSERT_EQ(ans1,myreversePrint.reverseRecursion(&node1));
 }
 
+TEST(Solution_CQueue_Used_Stack_TEST, myqueueTest) {
+    Solution_CQueue_Used_Stack* obj;
+    obj = new Solution_CQueue_Used_Stack();
+    obj->appendTail(3);
+    ASSERT_EQ(3, obj->deleteHead());
+    ASSERT_EQ(-1, obj->deleteHead());
+    delete obj;
+
+    obj = new Solution_CQueue_Used_Stack();
+    ASSERT_EQ(-1, obj->deleteHead());
+    obj->appendTail(5);
+    obj->appendTail(2);
+    ASSERT_EQ(5, obj->deleteHead());
+    ASSERT_EQ(2, obj->deleteHead());
+    delete obj;
+}
+
+
+
 GTEST_API_ int main(int argc, char** argv) {
     testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();

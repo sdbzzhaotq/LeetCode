@@ -162,4 +162,13 @@ public:
     std::vector<int> reverseRecursion(ListNode* head);
 };
 
+class Solution_CQueue_Used_Stack {
+private:
+    std::stack<int> stk4in;
+    std::stack<int> stk4out;
+public:
+    void appendTail(int value);
+    int deleteHead();
+};
+
 #endif
